@@ -1,7 +1,7 @@
 ---
 
 - name: Distribute RFC 7919 Diffie-Hellman groups from https://ssl-config.mozilla.org/ffdhe(2048|3072|4096).txt
-  tags: ffdhegroup
+  tags: ffdhegroups
   copy:
     src: "{{ item }}"
     dest: "/etc/ssl/{{ item }}"
