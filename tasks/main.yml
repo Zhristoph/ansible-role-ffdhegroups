@@ -1,0 +1,14 @@
+---
+
+- name: Distribute RFC 7919 Diffie-Hellman groups from https://ssl-config.mozilla.org/ffdhe(2048|3072|4096).txt
+  tags: ffdhegroup
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/ssl/{{ item }}"
+    owner: root
+    group: root
+    mode: u=r,g=r,o=r
+  loop:
+    - ffdhe2048.pem
+    - ffdhe3072.pem
+    - ffdhe4096.pem
