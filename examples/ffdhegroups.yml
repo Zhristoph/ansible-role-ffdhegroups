@@ -1,0 +1,7 @@
+- name: Deploy Finite Field Diffie-Hellman Ephemeral Parameters for Transport Layer Security of RFC7919
+  hosts: ffdhegroups
+  become: yes
+  gather_facts: no
+  roles:
+    - ffdhegroups
+
